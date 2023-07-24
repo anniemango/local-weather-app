@@ -1,4 +1,7 @@
-<div>
+<div *ngIf="current.description===''">
+    No data available
+</div>
+<div *ngIf="current.description!==''">
     <div>
         <span>{{current.city}}, {{current.country}}</span>
         <br>
