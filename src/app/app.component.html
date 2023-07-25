@@ -1,7 +1,9 @@
-<!doctype html>
-<div style="text-align: center;">
-  <h1>Local Weather</h1>
-  <div>Your city, your forecast.</div>
-  <h2>Current Weather</h2>
-  <app-current-weather [current]="currentWeather"></app-current-weather>
+<div style="text-align: center; align-items: center">
+  <mat-toolbar color="primary">Local Weather</mat-toolbar>
+  <div><p>Your city, your forecast.</p></div>
+  <div>
+    <app-city-search (searchEvent)="doSearch($event)"></app-city-search>
+  </div>
+  <br><br>
+  <mat-card style="max-width:400px; margin-left:250px; margin-top: 50px;"><app-current-weather [current]="currentWeather"></app-current-weather></mat-card>
 </div>
