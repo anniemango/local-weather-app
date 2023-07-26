@@ -21,6 +21,6 @@ export class AppComponent {
   constructor(private weatherService: WeatherService) {}
     doSearch(searchValue: string){
       const userInput = searchValue.split(',').map(s => s.trim())
-      this.weatherService.getCurrentWeather(userInput[0],userInput[1]).subscribe(data => this.currentWeather)
+      this.weatherService.getCurrentWeather(userInput[0],userInput[1]).subscribe(data => this.currentWeather = data)
   }
 }
